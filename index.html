@@ -4,28 +4,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="style.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="style.js"></script>
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/Mirror.js"></script>
+    <script type="text/javascript" src="js/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/audio.js"></script>
+    <script type="text/javascript" src="js/doug.js"></script>
     <title>Visualizer</title>
 </head>
 <body>
     <div class="row">
-    <div class="container col-12">
-        <div class="header col-12"><button id="sandwich">Menu</button></div>
-        <div class="slider col-3">
-            <div id="local">local file</div>
-            <div id="localChoice">Select an mp3 to play:<br />
+        <div class="container col-12">
+            <div class="header col-12"><button id="sandwich">Menu</button></div>
+            <div class="slider col-3">
+                <div id="local">local file</div>
+                <div id="localChoice">
+                    Select an mp3 to play:<br />
                     Browse <input type="file" id="file" accept="audio/*" /><br />
-                    <div id="songTitle">title: </div>
-                    <audio id="audio" style="width:75px" controls></audio>
+                    <button id="pause">Pause</button>
+                </div>
+                <div id="streaming">Streaming</div>
+                <div id="streamingChoice"></div>
             </div>
-            <div id="streaming">Streaming</div>
-            <div id="streamingChoice"></div>
+            <div class="canvas col-12">
+                <div id="visuals">
+                    <script type="text/javascript" src="js/visualizer.js"></script>
+                </div>
+            </div>
         </div>
-        <div class="canvas col-12"><canvas id="myCanvas" width="900" height="500"></canvas></div>
     </div>
-        </div>
+    </div>
     <br />
 </body>
 </html>
