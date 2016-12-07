@@ -2,9 +2,13 @@
 $(document).ready(function () {
 
     var text2 = "";
+    var song1 = "data\song1.mp3";
+    var song2 = "data\song2.mp3";
 
     $(".slider").hide();
     $("#localChoice").hide();
+    $("#streamingChoice").hide();
+
     $("#sandwich").on({
         click: function () {
             $(".slider").toggle(1000);
@@ -24,6 +28,18 @@ $(document).ready(function () {
     $("#pause").on({
         click: function () {
             alert(text2);
+        },
+    });
+
+    $("#song1").on({
+        click: function () {
+            bufferSong('data/song1.mp3');
+        },
+    });
+
+    $("#song2").on({
+        click: function () {
+            bufferSong('data/song2.mp3');
         },
     });
 
